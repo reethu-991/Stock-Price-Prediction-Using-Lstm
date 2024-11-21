@@ -1,0 +1,148 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Updated font family */
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #1f4037, #99f2c8);
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 3em;
+    color: #ffcc00;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    border: 2px solid #ffffff;
+    border-radius: 10px;
+    background-color: rgba(65, 236, 99, 0.5);
+    transition: transform 0.3s;
+}
+
+h1:hover {
+    transform: scale(1.05);
+}
+
+
+.section {
+    padding: 20px;
+    width: 100%;
+    max-width: 1200px;
+    text-align: center;
+}
+
+#section1,#section2,#recommendation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 40px 0;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+#section1 img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.project-info {
+    max-width: 600px;
+    text-align: left;
+    line-height: 1.6; /* Increased line height for better readability */
+}
+
+.project-info h2 {
+    margin-bottom: 15px; /* Space below the heading */
+}
+h2 {
+    text-align: center;                     /* Center the text */
+    margin: 20px 0;                        /* Space above and below the heading */
+    font-size: 2em;                        /* Increase font size */
+    color: #ffcc00;                        /* Gold color for the text */
+    font-family: 'Arial', sans-serif;      /* Clean, sans-serif font */
+    position: relative;                    /* For positioning the underline */
+    padding-bottom: 10px;                  /* Space between text and underline */
+}
+
+h2::after {
+    content: '';                           /* Empty content for pseudo-element */
+    display: block;                        /* Makes it a block element */
+    width: 60%;                            /* Width of the underline */
+    height: 4px;                           /* Thickness of the underline */
+    background-color: #ffffff;             /* White underline color */
+    margin: 0 auto;                        /* Center the underline */
+    border-radius: 2px;                    /* Rounded edges for the underline */
+    position: absolute;                    /* Positioning for better placement */
+    bottom: 0;                             /* Aligns the underline with the bottom of the heading */
+    left: 20%;                             /* Offset from the left */
+}
+
+.navigate-btn {
+    margin-top: 20px;
+    padding: 15px 30px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+}
+
+.navigate-btn:hover {
+    background-color: #218838;
+}
+
+.form-group {
+    margin: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 600px;
+    width: 100%;
+}
+
+label {
+    font-size: 1.2em;
+}
+
+select,
+input[type="date"] {
+    padding: 10px;
+    font-size: 1em;
+    border-radius: 5px;
+    border: none;
+    width: 60%;
+    max-width: 300px;
+}
+
+@media (min-width: 768px) {
+    #section1 {
+        flex-direction: row;
+    }
+    #section1 img {
+        max-width: 300px;
+        margin-right: 40px;
+    }
+}
+
+@media (max-width: 767px) {
+    .form-group {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    label, select, input[type="date"] {
+        width: 100%;
+        max-width: none;
+    }
+}
